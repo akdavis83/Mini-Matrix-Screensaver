@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+    <title>Matrix Background</title>
+	<link rel="icon" href="https://fav.farm/🔥" />
+	<style>
+		@font-face {
+			font-family: Matrix;
+			src: local('☺'), url('Matrix.ttf') format('truetype');
+		}
+		@-webkit-keyframes waterfall {
+			from {
+				background-position: 84px -2660px, 426px -1080px, 730px -3240px, 872px -2160px, 95% -1350px, 0 0;
+			} to {
+				background-position: 84px 1660px, 426px 3240px, 730px 1080px, 872px 2160px, 95% 2970px, 0 1460px;
+			}
+		}
+		@-webkit-keyframes shake {
+			0% {text-shadow: 1px 5px 25px rgba(0,255,0,0.5), 1px -5px 15px rgba(0,255,0,0.5);}
+			10% {text-shadow: -2px 5px 25px rgba(0,255,0,0.5), -1px -5px 15px rgba(0,255,0,0.5);}
+			12% {text-shadow: -1px 5px 25px rgba(0,255,0,0.5), 3px -5px 15px rgba(0,255,0,0.5);}
+			16% {text-shadow: 2px 5px 25px rgba(0,255,0,0.5), 2px -5px 15px rgba(0,255,0,0.5);}
+			40% {text-shadow: 3px 5px 25px rgba(0,255,0,0.5), -2px -5px 15px rgba(0,255,0,0.5);}
+			50% {text-shadow: -3px 5px 25px rgba(0,255,0,0.5), 2px -5px 15px rgba(0,255,0,0.5);}
+			55% {text-shadow: -1px 5px 25px rgba(0,255,0,0.5), 3px -5px 15px rgba(0,255,0,0.5);}
+			65% {text-shadow: 2px 5px 25px rgba(0,255,0,0.5), 2px -5px 15px rgba(0,255,0,0.5);}
+			70% {text-shadow: 3px 5px 25px rgba(0,255,0,0.5), -1px -5px 15px rgba(0,255,0,0.5);}
+			90% {text-shadow: -1px 5px 25px rgba(0,255,0,0.5), 3px -5px 15px rgba(0,255,0,0.5);}
+			100% {text-shadow: 2px 5px 25px rgba(0,255,0,0.5), 2px -5px 15px rgba(0,255,0,0.5);}
+		}
+		html {background: #111 url(bg01.png) 0 0 repeat;
+			background:
+				url(bg03b.png) 84px -1080px no-repeat,
+				url(bg01b.png) 426px -1080px no-repeat,
+				url(bg02b.png) 730px -1080px no-repeat,
+				url(bg03b.png) 872px -1080px no-repeat,
+				url(bg02b.png) 95% -1080px no-repeat,
+				url(bg00.jpg) 0 0 repeat;
+			background-color: #111;
+			-webkit-animation: waterfall 10s linear infinite;
+		}
+		body {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 968px;
+			margin: 0 0 0 -514px;
+			padding: 3em 25px 5em;
+			border: 1px solid rgba(128,255,128,0.25);
+			border-width: 0 1px 1px;
+			color: rgba(67%,100%,67%,0.33);
+			background: rgba(0,0,0,0.9);
+			text-shadow: 0 0 3px #000;
+			font: 0.9em sans-serif;
+		}
+		h1 {
+			font: 350% Matrix, sans-serif;
+			text-transform: uppercase;
+			color: rgb(210,246,218);
+			text-align: center;
+			text-shadow: 1px 5px 25px rgba(0,255,0,0.5), 1px -5px 15px rgba(0,255,0,0.5);
+			padding-bottom: 0.25em;
+			margin: 0;
+			-webkit-animation: shake 2.5s infinite linear alternate;
+
+		}
+		h1 + p {
+			text-align: center;
+			margin: 0.75em 0 2em;
+			font-size: 1.15em;
+			text-shadow: 1px 0 15px rgba(0,255,0,0.5);
+		}
+		a {
+			color: rgba(0,255,0,0.5);
+		}
+		section {
+			float: left;
+			width: 60%;
+			margin: 0 100px 0 0;
+			position: relative;
+			z-index: 1;
+		}
+		section p {
+			font-style: italic;
+			text-align: center;
+			line-height: 1.33;
+			margin: 1.5em 3em;
+		}
+		section b {
+			font-size: 2em;
+			vertical-align: text-bottom;
+			line-height: 0.67em;
+			opacity: 0.67;
+			font-style: normal;
+		}
+		textarea {
+			background: rgba(23,23,23,0.9);
+			color: rgb(51,204,51);
+			font: bold 1.1em monospace;
+			padding: 0.5em 1em;
+		}
+		button {
+			border-radius: 100px;
+			border-width: 0;
+			padding: 0.5em 1em;
+			color: #FFF;
+			text-shadow: 0 0 4px #000, 1px 1px 1px #000;
+			cursor: pointer;
+		}
+		#run-it {
+			background-color: rgba(255,0,0,1);
+			background: rgba(255,0,0,1) -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+			background: rgba(255,0,0,1) -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.5)), to(rgba(0,0,0,0.5)));
+			background: rgba(255,0,0,1) -webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+			background: rgba(255,0,0,1) linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+		}
+		#reset-it {
+			background-color: rgba(51,51,255,1);
+			background: rgba(51,51,255,1) -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+			background: rgba(51,51,255,1) -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.5)), to(rgba(0,0,0,0.5)));
+			background: rgba(51,51,255,1) -webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+			background: rgba(51,51,255,1) linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.5));
+		}
+		#frame {
+			float: right;
+			margin-right: 50px;
+			width: 200px;
+			height: 200px;
+			background: rgba(13,13,13,0.93);
+			border: 1px solid rgba(255,255,255,0.13);
+		}
+		#test {
+			width: 200px;
+			height: 200px;
+			background: rgba(0,255,0,0.5);
+			border: 1px solid rgba(0,255,0,0.75);
+		}
+		footer {
+			text-align: center;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		a {
+			transform: matrix3d();
+		}
+	</style>
+  </head>
+  <body>
+  	<h1>The Matrix</h1>
+  	<!-- <p>Spoon boy: Do not try and bend the spoon. That's impossible. Instead... only try to realize the truth.
+		Neo: What truth?
+		Spoon boy: There is no spoon.
+		Neo: There is no spoon?
+		Spoon boy: Then you'll see, that it is not the spoon that bends, it is only yourself. </p>
+<img src="red or blue.jpg" alt="RB" style="width: 30vh;">
+  	<section>
+		<br>
+	<p>
+	This is your last chance. After this, there is no turning back. You take the blue pill&mdash;the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill&mdash;you stay in Wonderland and I show you how deep the rabbit-hole goes.</p>
+	<img src="morpheos.gif" alt="Morph" style="width: 25vh;">
+	<p>
+		<a href="https://akdavis83.github.io/Matrix3/"><button id="run-it">Red Pill</button></a>
+   <b>⬌</b>
+   <a href="https://akdavis83.github.io/Matrix3/"><button id="reset-it">Blue Pill</button></a>
+   </p>
+	</section>
+	<div id="frame">
+		<div id="test"><a href="https://akdavis83.github.io/Matrix3/"><img src="Matrix.png" alt="Matrix" style="width: 26.5vh;"></a></div>
+	</div>
+	<footer>
+		<p><a href="https://akdavis83.github.io/Matrix3/"> Enter The Matrix</a></p>
+	</footer> -->
+	<script>
+		var
+		props		= ['transform','-moz-transform','-ms-transform','-o-transform','-webkit-transform'],
+		transform	= document.getElementById('transform'),
+		matrix		= document.getElementById('matrix'),
+		el			= document.getElementById('test'),
+		UNDEFINED, key, v, num, positive, str, prop;
+		transform.onkeyup = function(e){
+			e = e ? e : event;
+			key = e.keyCode || e.charCode;
+			if ( key == 32 || key == 186 )
+			{
+				calculate();
+			}
+		};
+		function camelize( str )
+		{
+			var
+			regex = /(-[a-z])/g,
+			func  = function( bit ){
+			  return bit.toUpperCase().replace( '-', '' );
+			};
+			camelize = function( str )
+			{
+			  return ( typeof str == 'string') ? str.toLowerCase().replace( regex, func )
+			                           		   : str;
+			};
+			return camelize( str );
+		}
+		function getCSSValue( el, prop )
+		{
+			var computed = window.getComputedStyle;
+			if ( el.currentStyle )
+			{
+				getCSSValue = function( el, prop )
+				{
+				  return el.currentStyle[camelize( prop )];
+				};
+			}
+			else if ( computed )
+			{
+				getCSSValue = function( el, prop )
+				{
+				  return computed( el, null ).getPropertyValue( prop );
+				};
+			}
+			else
+			{
+				getCSSValue = function()
+				{
+				  return false;
+				};
+			}
+			return getCSSValue( el, prop );
+		}
+		function addInlineStyle( el, property, value )
+		{
+			try {
+				el.style[property] = value;
+				el.style[camelize( property )] = value;
+			} catch( e ){
+				return valse;
+			}
+			return true;
+		}
+	  	function calculate()
+		{
+			var val = transform.value.replace( ';', '' ), v;
+			if ( prop == UNDEFINED )
+			{
+				v = props.length;
+				while ( v-- )
+				{
+					if ( addInlineStyle( el, props[v], val ) )
+					{
+						if ( !! getCSSValue( el, props[v] ) )
+						{
+							prop = props[v];
+							break;
+						}
+					}
+				}
+			}
+			if ( prop !== UNDEFINED )
+			{
+				calculate = function()
+				{
+					var val = transform.value.replace( ';', '' ), v;
+					
+					// set it
+					addInlineStyle( el, prop, val );
+
+					// get it back
+					val = getCSSValue( el, prop );
+					if ( val.match('e') )
+					{
+						val = val.replace(/matrix\((.*)\)/,'$1').split(',');
+						v = val.length;
+						while ( v-- )
+						{
+							val[v] = val[v].replace(/\s/,'');
+							if ( val[v].match('e') )
+							{
+								val[v] = 0;
+							}
+						}
+						val = 'matrix(' + val.join(', ') + ')';
+					}
+					
+					// set it
+					matrix.value = val;
+				};
+				calculate();
+			}
+		}
+		document.getElementById('run-it').onclick = calculate;
+		document.getElementById('reset-it').onclick = function(){
+			transform.value = '';
+			matrix.value = '';
+			el.style.cssText = '';
+		};
+	</script>
+ </body>
+</html>
